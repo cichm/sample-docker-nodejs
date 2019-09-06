@@ -1,0 +1,12 @@
+doctype html
+html
+	body
+		h1 Echo
+		form(action="/echo" method="post")
+			.field
+				label.label E-mail
+				.control
+					input(type="email" name="email" class="input" placeholder="test@test.com")
+			.field.is-grouped
+				.control
+					button(type="submit" class="button is-link") Sign up!

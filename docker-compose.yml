@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  echo-service:
+    build: "./echo"
+    volumes:
+      - ./echo:/home/node/app
+    ports:
+      - 8000:80
+  web-service:
+    build: "./web"
+    volumes:
+      - ./web:/home/node/app
+    ports:
+      - 8001:80
+    depends_on:
+      - echo-service
